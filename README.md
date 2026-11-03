@@ -150,6 +150,13 @@ All data submitted to the `InvoiceMint` smart contract is stored publicly on the
 
 ---
 
+## 📜 Documentation
+
+- **Whitepaper:** [WHITEPAPER.md](./WHITEPAPER.md)
+- **Pitch Deck:** [PITCH_DECK.md](./PITCH_DECK.md)
+
+---
+
 ## 📜 License
 
 MIT License. Designed and crafted with precision for decentralized billing.
