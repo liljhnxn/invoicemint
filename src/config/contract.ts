@@ -3,7 +3,7 @@ import deploymentData from "./deployment.json";
 export const INVOICE_MINT_ADDRESS = (
   process.env.NEXT_PUBLIC_INVOICEMINT_ADDRESS ||
   (deploymentData as { address?: string })?.address ||
-  "0x0000000000000000000000000000000000000000"
+  "0x1648E054CAF65ee30304649e253E68D9648Addd6"
 ) as `0x${string}`;
 
 export const INVOICE_MINT_ABI = [
