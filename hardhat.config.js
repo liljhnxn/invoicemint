@@ -10,6 +10,14 @@ if (fs.existsSync(path.resolve(__dirname, ".env.local"))) {
   dotenv.config();
 }
 
+const privateKey = process.env.PRIVATE_KEY
+  ? process.env.PRIVATE_KEY.startsWith("0x")
+    ? process.env.PRIVATE_KEY
+    : `0x${process.env.PRIVATE_KEY}`
+  : undefined;
+
+const accounts = privateKey ? [privateKey] : [];
+
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: {
@@ -25,23 +33,46 @@ module.exports = {
     hardhat: {
       chainId: 31337,
     },
-    botchain: {
-      url: process.env.NEXT_PUBLIC_RPC_URL || "https://rpc.bohr.life",
+    botchainMainnet: {
+      url: process.env.NEXT_PUBLIC_RPC_URL || "https://rpc.botchain.ai",
+      chainId: 677,
+      accounts: accounts,
+    },
+    botchainTestnet: {
+      url: "https://rpc.bohr.life",
       chainId: 968,
-      accounts: process.env.PRIVATE_KEY
-        ? [
-            process.env.PRIVATE_KEY.startsWith("0x")
-              ? process.env.PRIVATE_KEY
-              : `0x${process.env.PRIVATE_KEY}`,
-          ]
-        : [],
+      accounts: accounts,
+    },
+    // Backwards-compatible alias
+    botchain: {
+      url: "https://rpc.bohr.life",
+      chainId: 968,
+      accounts: accounts,
     },
   },
   etherscan: {
     apiKey: {
+      botchainMainnet: "dummy-key",
+      botchainTestnet: "dummy-key",
       botchain: "dummy-key",
     },
     customChains: [
+      {
+        network: "botchainMainnet",
+        chainId: 677,
+        urls: {
+          apiURL: "https://scan.botchain.ai/api",
+          browserURL: "https://scan.botchain.ai",
+        },
+      },
+      {
+        network: "botchainTestnet",
+        chainId: 968,
+        urls: {
+          apiURL: "https://scan.bohr.life/api",
+          browserURL: "https://scan.bohr.life",
+        },
+      },
       {
         network: "botchain",
         chainId: 968,
@@ -59,4 +90,3 @@ module.exports = {
     artifacts: "./artifacts",
   },
 };
-

@@ -192,7 +192,7 @@ export function InvoiceList({
           <div className="py-20 text-center flex flex-col items-center justify-center">
             <Loader2 className="h-7 w-7 text-purple-500 animate-spin mb-3" />
             <p className="text-sm font-medium text-zinc-300">Loading on-chain records...</p>
-            <p className="text-xs text-zinc-500 mt-1">Connecting to Botchain Testnet</p>
+            <p className="text-xs text-zinc-500 mt-1">Connecting to Botchain Mainnet</p>
           </div>
         ) : filteredInvoices.length === 0 ? (
           <div className="py-16 text-center flex flex-col items-center justify-center px-4">
@@ -251,7 +251,7 @@ export function InvoiceList({
 
                       {/* Amount */}
                       <td className="py-4 px-4 font-mono font-semibold text-emerald-400 whitespace-nowrap">
-                        {formatCryptoAmount(inv.amount)} BHR
+                        {formatCryptoAmount(inv.amount)} BOT
                       </td>
 
                       {/* Dates */}

@@ -131,7 +131,7 @@ export function CreateInvoiceModal({ isOpen, onClose, onSuccess }: CreateInvoice
             </div>
             <h4 className="text-lg font-bold text-zinc-100">Invoice Minted On-Chain!</h4>
             <p className="text-xs text-zinc-400 mt-1">
-              Your invoice record has been permanently written to Botchain Testnet.
+              Your invoice record has been permanently written to Botchain Mainnet.
             </p>
           </div>
         ) : (
@@ -182,7 +182,7 @@ export function CreateInvoiceModal({ isOpen, onClose, onSuccess }: CreateInvoice
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
               <div>
                 <label className="block text-xs font-medium text-zinc-300 mb-1.5">
-                  Amount (BHR) *
+                  Amount (BOT) *
                 </label>
                 <div className="relative">
                   <input
@@ -197,7 +197,7 @@ export function CreateInvoiceModal({ isOpen, onClose, onSuccess }: CreateInvoice
                     className="w-full rounded-xl border border-zinc-800 bg-[#16181f] px-3.5 py-2.5 pr-12 text-sm text-zinc-100 font-mono placeholder-zinc-500 focus:border-purple-500 focus:outline-none focus:ring-1 focus:ring-purple-500/50 transition-all disabled:opacity-60"
                   />
                   <span className="absolute right-3.5 top-2.5 text-xs font-mono text-zinc-400">
-                    BHR
+                    BOT
                   </span>
                 </div>
               </div>

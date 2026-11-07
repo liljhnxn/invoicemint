@@ -10,7 +10,8 @@
     "compile": "hardhat compile",
     "test": "hardhat test",
     "deploy:local": "hardhat run scripts/deploy.js --network localhost",
-    "deploy:botchain": "hardhat run scripts/deploy.js --network botchain"
+    "deploy:botchain": "hardhat run scripts/deploy.js --network botchain",
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network botchainMainnet"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.62.8",

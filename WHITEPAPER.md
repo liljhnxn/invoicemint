@@ -2,7 +2,7 @@
 
 **Decentralized Invoicing & Immutable Settlement Accounting on Botchain**  
 *Tagline: Create invoices. Keep every record.*  
-*Version: 1.0.0 — November 2026*  
+*Version: 2.0.0 — November 2026 (Botchain Mainnet)*  
 
 ---
 
@@ -10,7 +10,7 @@
 
 Freelancers, independent software engineers, DAOs, and digital agencies operating in the global digital economy increasingly demand verifiable, tamper-resistant financial records. Traditional Web2 invoicing software (e.g., QuickBooks, FreshBooks, Stripe Invoicing) relies on centralized databases, charges recurring subscription fees, creates vendor lock-in, and introduces single points of data failure.
 
-**InvoiceMint** is a decentralized, serverless Web3 invoicing application deployed natively on **Botchain Testnet (Chain ID 968)**. InvoiceMint allows any wallet address to mint verifiable invoice records directly onto the blockchain, maintain immutable lifecycle tracking (Unpaid, Paid, Cancelled), and export print-ready PDF invoices without relying on centralized databases, third-party user accounts, or financial intermediaries.
+**InvoiceMint** is a decentralized, serverless Web3 invoicing application deployed natively on **Botchain Mainnet (Chain ID 677)**. InvoiceMint allows any wallet address to mint verifiable invoice records directly onto the blockchain, maintain immutable lifecycle tracking (Unpaid, Paid, Cancelled), and export print-ready PDF invoices without relying on centralized databases, third-party user accounts, or financial intermediaries.
 
 ---
 
@@ -51,12 +51,12 @@ InvoiceMint bridges professional business invoicing with decentralized ledger in
                             │ (JSON-RPC over HTTPS)
                             ▼
 ┌────────────────────────────────────────────────────────┐
-│               Botchain Testnet (Chain ID 968)          │
-│           RPC Endpoint: https://rpc.bohr.life          │
+│               Botchain Mainnet (Chain ID 677)          │
+│           RPC Endpoint: https://rpc.botchain.ai        │
 │                                                        │
 │   ┌────────────────────────────────────────────────┐   │
 │   │           InvoiceMint Smart Contract           │   │
-│   │   0x00Fb36747CCc879D0Bb6cDB70eaa30B47Be8b116  │   │
+│   │   0x1648E054CAF65ee30304649e253E68D9648Addd6  │   │
 │   │                                                │   │
 │   │  • createInvoice()      • markAsPaid()         │   │
 │   │  • cancelInvoice()      • getMyInvoices()      │   │
@@ -105,21 +105,23 @@ struct Invoice {
 
 ---
 
-## 5. Deployment & Verification
+## 5. Mainnet Deployment & Verification
 
-- **Network:** Botchain Testnet
-- **Chain ID:** `968`
-- **RPC URL:** `https://rpc.bohr.life`
-- **Contract Address:** [`0x00Fb36747CCc879D0Bb6cDB70eaa30B47Be8b116`](https://scan.bohr.life/address/0x00Fb36747CCc879D0Bb6cDB70eaa30B47Be8b116#code)
-- **Explorer:** [BohrScan Verified Contract](https://scan.bohr.life/address/0x00Fb36747CCc879D0Bb6cDB70eaa30B47Be8b116#code)
+- **Network:** Botchain Mainnet
+- **Chain ID:** `677`
+- **Native Currency:** `BOT` (18 decimals, 150M total supply)
+- **RPC URL:** `https://rpc.botchain.ai`
+- **Contract Address:** [`0x1648E054CAF65ee30304649e253E68D9648Addd6`](https://scan.botchain.ai/address/0x1648E054CAF65ee30304649e253E68D9648Addd6#code)
+- **Explorer:** [BotchainScan Verified Contract](https://scan.botchain.ai/address/0x1648E054CAF65ee30304649e253E68D9648Addd6#code)
 - **Compiler:** Solidity `v0.8.20`
+- **Deployment Gas Cost:** 0.0182 BOT
 
 ---
 
 ## 6. Tokenomics & Business Model
 
 InvoiceMint operates as a **public-good utility dApp**:
-- **Zero Platform Fees:** Users only pay standard Botchain network gas fees (fractions of a cent in BHR).
+- **Zero Platform Fees:** Users only pay standard Botchain network gas fees (fractions of a cent in BOT).
 - **No Token Gate:** Anyone with a Web3 wallet can immediately issue invoices.
 - **Future Commercial Layer (Optional):** Future enterprise features (multi-currency escrow, automated split payments, recurring invoice streams) can be added as modular add-ons without restricting core invoicing access.
 
@@ -127,21 +129,21 @@ InvoiceMint operates as a **public-good utility dApp**:
 
 ## 7. Roadmap
 
-### Phase 1: Core Deployment (Current ✅)
-- [x] Solidity smart contract deployed and verified on Botchain Testnet.
+### Phase 1: Core Deployment & Mainnet Launch (Completed ✅)
+- [x] Solidity smart contract deployed and verified on Botchain Mainnet (Chain ID 677).
 - [x] Responsive Next.js 14 frontend with dark charcoal UI.
 - [x] MetaMask wallet integration via wagmi v2.
 - [x] Real-time dashboard statistics and status filtering.
 - [x] Print-to-PDF invoice export view.
 
-### Phase 2: Ecosystem Integration
-- [ ] Botchain mainnet deployment.
+### Phase 2: Ecosystem Integration (In Progress)
+- [x] Verified on BotchainScan.
 - [ ] IPFS/Arweave backup for extended attachments.
 - [ ] Shareable public invoice view link (client read-only page).
 
 ### Phase 3: Advanced Settlement
 - [ ] Optional direct crypto payment integration (settle invoice on-chain with automatic receipt).
-- [ ] Multi-token invoicing support (USDT, USDC, BHR).
+- [ ] Multi-token invoicing support (USDT, USDC, BOT).
 - [ ] CSV / Accounting software export (Xero / QuickBooks compatible).
 
 ---

@@ -71,7 +71,7 @@ export default function Home() {
           <div className="py-16 sm:py-24 text-center max-w-2xl mx-auto space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-purple-800/50 bg-purple-950/40 px-4 py-1.5 text-xs font-medium text-purple-300">
               <Sparkles className="h-3.5 w-3.5" />
-              <span>Web3 On-Chain Invoicing on Botchain</span>
+              <span>Web3 On-Chain Invoicing on Botchain Mainnet</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-zinc-100">
@@ -94,7 +94,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xs font-semibold text-zinc-200">100% On-Chain</h3>
                 <p className="text-[11px] text-zinc-400 mt-1">
-                  Every invoice ID, customer label, and amount is minted directly to Botchain Testnet.
+                  Every invoice ID, customer label, and amount is minted directly to Botchain Mainnet.
                 </p>
               </div>
 
@@ -189,15 +189,15 @@ export default function Home() {
             <span>Create invoices. Keep every record.</span>
           </div>
           <div className="flex items-center gap-4 text-[11px] text-zinc-400">
-            <span>Botchain Testnet (Chain ID 968)</span>
+            <span>Botchain Mainnet (Chain ID 677)</span>
             <span>•</span>
             <a
-              href="https://scan.bohr.life"
+              href="https://scan.botchain.ai"
               target="_blank"
               rel="noopener noreferrer"
               className="text-purple-400 hover:underline"
             >
-              BohrScan Explorer
+              BotchainScan Explorer
             </a>
           </div>
         </div>

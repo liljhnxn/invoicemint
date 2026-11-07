@@ -1,6 +1,6 @@
 # InvoiceMint Pitch Deck
 
-**Decentralized Web3 Invoicing on Botchain**  
+**Decentralized Web3 Invoicing on Botchain Mainnet**  
 *Create invoices. Keep every record.*  
 
 ---
@@ -9,8 +9,9 @@
 - **Product Name:** InvoiceMint
 - **Tagline:** Create invoices. Keep every record.
 - **Mission:** Sovereign, tamper-proof invoicing and settlement records for the decentralized workforce.
-- **Chain:** Botchain Testnet (Chain ID 968)
-- **Live Demo / Contract:** `0x00Fb36747CCc879D0Bb6cDB70eaa30B47Be8b116`
+- **Chain:** Botchain Mainnet (Chain ID 677)
+- **Token:** BOT (150M Total Supply)
+- **Live Verified Contract:** `0x1648E054CAF65ee30304649e253E68D9648Addd6`
 
 ---
 
@@ -32,8 +33,8 @@ A lightweight, decentralized invoicing application built natively on Botchain:
 ---
 
 ### Slide 4: How It Works (User Journey)
-1. **Connect:** Connect MetaMask to Botchain Testnet (Chain ID 968).
-2. **Mint:** Enter customer name, project description, amount (BHR), and due date $\rightarrow$ mint invoice to chain.
+1. **Connect:** Connect MetaMask to Botchain Mainnet (Chain ID 677).
+2. **Mint:** Enter customer name, project description, amount (BOT), and due date $\rightarrow$ mint invoice to chain.
 3. **Manage:** Track total invoiced amounts, outstanding balances, and settlement rates in real-time.
 4. **Export & Settle:** Download print-perfect PDF invoices or mark invoices as "Paid" once settled.
 
@@ -48,10 +49,10 @@ A lightweight, decentralized invoicing application built natively on Botchain:
 ---
 
 ### Slide 6: Tech Stack & Architecture
-- **Smart Contract:** Solidity `^0.8.20`, Hardhat, Open source & verified on BohrScan.
+- **Smart Contract:** Solidity `^0.8.20`, Hardhat, Open source & verified on BotchainScan.
 - **Frontend:** Next.js 14 (App Router), TypeScript, Tailwind CSS.
 - **Web3 Layer:** wagmi v2, viem, MetaMask connector.
-- **Blockchain:** Botchain Testnet (`https://rpc.bohr.life`, Chain ID 968).
+- **Blockchain:** Botchain Mainnet (`https://rpc.botchain.ai`, Chain ID 677).
 
 ---
 
@@ -63,7 +64,8 @@ A lightweight, decentralized invoicing application built natively on Botchain:
 ---
 
 ### Slide 8: Live Traction & Milestones
-- ✅ Smart contract deployed & verified on Botchain Testnet ([BohrScan](https://scan.bohr.life/address/0x00Fb36747CCc879D0Bb6cDB70eaa30B47Be8b116#code)).
+- ✅ Smart contract deployed & verified on Botchain Mainnet ([BotchainScan](https://scan.botchain.ai/address/0x1648E054CAF65ee30304649e253E68D9648Addd6#code)).
+- ✅ Ultra-low gas deployment: Only 0.0182 BOT.
 - ✅ 14/14 automated smart contract unit test suites passing.
 - ✅ Full production Next.js frontend built and operational.
 - ✅ GitHub repository open-sourced: [https://github.com/liljhnxn/invoicemint](https://github.com/liljhnxn/invoicemint).
@@ -71,13 +73,13 @@ A lightweight, decentralized invoicing application built natively on Botchain:
 ---
 
 ### Slide 9: Roadmap
-- **Q1 2027:** Botchain Mainnet launch & client public read-only invoice links.
-- **Q2 2027:** Optional direct crypto payment settlement with instant on-chain receipts.
-- **Q3 2027:** Multi-token settlement support (USDT, USDC, BHR) and accounting software exports (CSV/Xero).
+- **Q4 2026:** Botchain Mainnet launch & client public read-only invoice links.
+- **Q1 2027:** Optional direct crypto payment settlement with instant on-chain receipts.
+- **Q2 2027:** Multi-token settlement support (USDT, USDC, BOT) and accounting software exports (CSV/Xero).
 
 ---
 
 ### Slide 10: Links & Contact
 - **GitHub Repository:** [https://github.com/liljhnxn/invoicemint](https://github.com/liljhnxn/invoicemint)
-- **Explorer Contract:** [0x00Fb36747CCc879D0Bb6cDB70eaa30B47Be8b116](https://scan.bohr.life/address/0x00Fb36747CCc879D0Bb6cDB70eaa30B47Be8b116#code)
+- **Mainnet Verified Contract:** [0x1648E054CAF65ee30304649e253E68D9648Addd6](https://scan.botchain.ai/address/0x1648E054CAF65ee30304649e253E68D9648Addd6#code)
 - **Whitepaper:** [`WHITEPAPER.md`](./WHITEPAPER.md)

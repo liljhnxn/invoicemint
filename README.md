@@ -9,7 +9,7 @@ InvoiceMint is a lightweight, decentralized Web3 invoicing application built for
 ## 🌟 Key Features
 
 - **100% On-Chain Records**: Invoices, customer business labels, descriptions, amounts, and statuses are permanently logged on the blockchain.
-- **Botchain Testnet Native**: Configured out-of-the-box for Botchain Testnet (Chain ID `968`).
+- **Botchain Mainnet Native**: Configured out-of-the-box for Botchain Mainnet (Chain ID `677`).
 - **Dashboard Analytics**: Real-time overview of total invoices, settled (paid) invoices, outstanding invoices, gross invoiced volume, and pending collections.
 - **Smart Status Management**: Mark invoices as paid or cancel unpaid invoices directly via smart contract transactions.
 - **Filter & Search**: Instant filtering by status (*All*, *Paid*, *Unpaid*, *Cancelled*, *Overdue*) and text search.
@@ -19,15 +19,17 @@ InvoiceMint is a lightweight, decentralized Web3 invoicing application built for
 
 ---
 
-## ⛓️ Blockchain Configuration (Botchain Testnet)
+## ⛓️ Blockchain Configuration (Botchain Mainnet)
 
 | Parameter | Value |
 | :--- | :--- |
-| **Network Name** | Botchain Testnet |
-| **Chain ID** | `968` |
-| **Currency Symbol** | `BHR` |
-| **RPC URL** | `https://rpc.bohr.life` |
-| **Block Explorer** | [https://scan.bohr.life](https://scan.bohr.life) |
+| **Network Name** | Botchain Mainnet |
+| **Chain ID** | `677` |
+| **Native Currency** | `BOT` (18 decimals) |
+| **Total Supply** | 150 Million BOT |
+| **RPC URL** | `https://rpc.botchain.ai` |
+| **Block Explorer** | [https://scan.botchain.ai](https://scan.botchain.ai) |
+| **Verified Contract** | [`0x1648E054CAF65ee30304649e253E68D9648Addd6`](https://scan.botchain.ai/address/0x1648E054CAF65ee30304649e253E68D9648Addd6#code) |
 
 ---
 
@@ -86,13 +88,13 @@ npm install
 Create a `.env.local` file in the root directory (refer to `.env.example`):
 
 ```bash
-# Botchain Testnet Details
-NEXT_PUBLIC_CHAIN_ID=968
-NEXT_PUBLIC_RPC_URL=https://rpc.bohr.life
-NEXT_PUBLIC_EXPLORER_URL=https://scan.bohr.life
+# Botchain Mainnet Details
+NEXT_PUBLIC_CHAIN_ID=677
+NEXT_PUBLIC_RPC_URL=https://rpc.botchain.ai
+NEXT_PUBLIC_EXPLORER_URL=https://scan.botchain.ai
 
-# Deployed Contract Address
-NEXT_PUBLIC_INVOICEMINT_ADDRESS=0x5FbDB2315678afecb367f032d93F642f64180aa3
+# Deployed Contract Address on Botchain Mainnet
+NEXT_PUBLIC_INVOICEMINT_ADDRESS=0x1648E054CAF65ee30304649e253E68D9648Addd6
 
 # Optional: Deployer private key for Botchain deployment
 PRIVATE_KEY=
@@ -113,12 +115,11 @@ To deploy locally:
 npm run deploy:local
 ```
 
-To deploy to Botchain Testnet:
-1. Ensure your `PRIVATE_KEY` has testnet BHR.
-2. Run:
+To deploy to Botchain Mainnet:
 ```bash
-npm run deploy:botchain
+npm run deploy:mainnet
 ```
+
 The script will output the deployed contract address and automatically save it to `src/config/deployment.json`.
 
 ### 6. Run the Next.js Frontend
@@ -160,4 +161,3 @@ All data submitted to the `InvoiceMint` smart contract is stored publicly on the
 ## 📜 License
 
 MIT License. Designed and crafted with precision for decentralized billing.
-

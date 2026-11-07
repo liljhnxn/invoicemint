@@ -45,7 +45,7 @@ export function StatsOverview({ invoices, isLoading }: StatsOverviewProps) {
     },
     {
       label: "Total Invoiced",
-      value: isLoading ? "..." : `${formatCryptoAmount(totalInvoicedAmount)} BHR`,
+      value: isLoading ? "..." : `${formatCryptoAmount(totalInvoicedAmount)} BOT`,
       subtext: "Gross invoice volume",
       icon: Coins,
       iconColor: "text-emerald-400",
@@ -53,7 +53,7 @@ export function StatsOverview({ invoices, isLoading }: StatsOverviewProps) {
     },
     {
       label: "Outstanding Amount",
-      value: isLoading ? "..." : `${formatCryptoAmount(outstandingAmount)} BHR`,
+      value: isLoading ? "..." : `${formatCryptoAmount(outstandingAmount)} BOT`,
       subtext: "Pending collection",
       icon: AlertCircle,
       iconColor: "text-amber-400",

@@ -75,7 +75,7 @@ export function InvoiceDetailModal({ invoice, onClose }: InvoiceDetailModalProps
                 <span className="font-mono text-zinc-300">{formatAddress(invoice.issuer)}</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <span>Network: Botchain Testnet (Chain ID 968)</span>
+                <span>Network: Botchain Mainnet (Chain ID 677)</span>
               </div>
             </div>
           </div>
@@ -119,7 +119,7 @@ export function InvoiceDetailModal({ invoice, onClose }: InvoiceDetailModalProps
               Total Amount Due
             </span>
             <div className="mt-1 text-2xl font-bold font-mono text-emerald-400">
-              {formatCryptoAmount(invoice.amount)} BHR
+              {formatCryptoAmount(invoice.amount)} BOT
             </div>
             <div className="text-[11px] text-zinc-400 printable-text-muted">
               Native Currency on Botchain
@@ -142,7 +142,7 @@ export function InvoiceDetailModal({ invoice, onClose }: InvoiceDetailModalProps
                   {invoice.description}
                 </td>
                 <td className="py-4 text-right font-mono text-sm text-zinc-100 font-semibold align-top">
-                  {formatCryptoAmount(invoice.amount)} BHR
+                  {formatCryptoAmount(invoice.amount)} BOT
                 </td>
               </tr>
             </tbody>
@@ -160,12 +160,12 @@ export function InvoiceDetailModal({ invoice, onClose }: InvoiceDetailModalProps
 
           <div className="no-print">
             <a
-              href={`https://scan.bohr.life/address/${invoice.issuer}`}
+              href={`https://scan.botchain.ai/address/${invoice.issuer}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs text-purple-400 hover:text-purple-300 transition-colors"
             >
-              <span>View Issuer on BohrScan</span>
+              <span>View Issuer on BotchainScan</span>
               <ExternalLink className="h-3.5 w-3.5" />
             </a>
           </div>
