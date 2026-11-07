@@ -38,23 +38,10 @@ module.exports = {
       chainId: 677,
       accounts: accounts,
     },
-    botchainTestnet: {
-      url: "https://rpc.bohr.life",
-      chainId: 968,
-      accounts: accounts,
-    },
-    // Backwards-compatible alias
-    botchain: {
-      url: "https://rpc.bohr.life",
-      chainId: 968,
-      accounts: accounts,
-    },
   },
   etherscan: {
     apiKey: {
       botchainMainnet: "dummy-key",
-      botchainTestnet: "dummy-key",
-      botchain: "dummy-key",
     },
     customChains: [
       {
@@ -63,22 +50,6 @@ module.exports = {
         urls: {
           apiURL: "https://scan.botchain.ai/api",
           browserURL: "https://scan.botchain.ai",
-        },
-      },
-      {
-        network: "botchainTestnet",
-        chainId: 968,
-        urls: {
-          apiURL: "https://scan.bohr.life/api",
-          browserURL: "https://scan.bohr.life",
-        },
-      },
-      {
-        network: "botchain",
-        chainId: 968,
-        urls: {
-          apiURL: "https://scan.bohr.life/api",
-          browserURL: "https://scan.bohr.life",
         },
       },
     ],

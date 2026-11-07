@@ -12,12 +12,14 @@ import { Invoice, InvoiceStatus } from "@/types/invoice";
 import {
   Plus,
   RefreshCw,
-  Wallet,
   Sparkles,
   ShieldCheck,
   FileCheck2,
   Lock,
-  Layers,
+  ExternalLink,
+  Globe,
+  Search,
+  CheckCircle2,
 } from "lucide-react";
 
 export default function Home() {
@@ -67,11 +69,11 @@ export default function Home() {
 
       <main className="flex-1 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-8 space-y-8">
         {!isConnected ? (
-          // Disconnected State
+          // Disconnected Hero State
           <div className="py-16 sm:py-24 text-center max-w-2xl mx-auto space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-purple-800/50 bg-purple-950/40 px-4 py-1.5 text-xs font-medium text-purple-300">
               <Sparkles className="h-3.5 w-3.5" />
-              <span>Web3 On-Chain Invoicing on Botchain Mainnet</span>
+              <span>Web3 On-Chain Invoicing on BOT Chain</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-zinc-100">
@@ -83,7 +85,7 @@ export default function Home() {
 
             <p className="text-sm sm:text-base text-zinc-400 leading-relaxed">
               InvoiceMint provides verifiable, immutable invoicing for freelancers, developers,
-              and small businesses. Your invoices exist permanently on-chain without intermediaries.
+              and businesses. Your invoices exist permanently on-chain without centralized databases or intermediaries.
             </p>
 
             {/* Feature highlights */}
@@ -94,7 +96,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xs font-semibold text-zinc-200">100% On-Chain</h3>
                 <p className="text-[11px] text-zinc-400 mt-1">
-                  Every invoice ID, customer label, and amount is minted directly to Botchain Mainnet.
+                  Every invoice ID, customer label, and amount is minted directly to BOT Chain.
                 </p>
               </div>
 
@@ -121,7 +123,7 @@ export default function Home() {
 
             <div className="pt-6">
               <p className="text-xs text-zinc-400">
-                Connect your MetaMask wallet above to begin creating and tracking invoices.
+                Connect your MetaMask wallet above to begin creating and tracking invoices on BOT Chain.
               </p>
             </div>
           </div>
@@ -135,7 +137,7 @@ export default function Home() {
                   <span>Invoice Dashboard</span>
                 </h2>
                 <p className="text-xs text-zinc-400 mt-0.5">
-                  Manage and track invoices issued from your connected wallet
+                  Manage and track invoices issued from your connected wallet on BOT Chain
                 </p>
               </div>
 
@@ -178,27 +180,111 @@ export default function Home() {
             </div>
           </>
         )}
+
+        {/* BOT Chain Ecosystem Card Section */}
+        <section className="pt-8 no-print">
+          <div className="rounded-2xl border border-zinc-800/90 bg-gradient-to-br from-[#12141a] via-[#101217] to-[#0c0d12] p-6 sm:p-8 shadow-lg">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+              {/* BOT Chain Info & Logo */}
+              <div className="space-y-2">
+                <div className="flex items-center gap-2.5">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-purple-600 font-bold text-white text-sm shadow-md">
+                    BOT
+                  </div>
+                  <div>
+                    <h3 className="text-base font-bold text-zinc-100 flex items-center gap-2">
+                      <span>Powered by BOT Chain</span>
+                      <span className="inline-flex items-center gap-1 rounded-full bg-emerald-950/70 border border-emerald-800/60 px-2 py-0.5 text-[10px] font-semibold text-emerald-400">
+                        <CheckCircle2 className="h-3 w-3" />
+                        <span>Chain ID 677</span>
+                      </span>
+                    </h3>
+                    <p className="text-xs text-zinc-400">
+                      High-performance, secure decentralized execution layer for Web3 billing & accounting
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Ecosystem Action Links */}
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href="https://botchain.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 rounded-xl border border-zinc-700 bg-zinc-800/80 px-4 py-2.5 text-xs font-semibold text-zinc-100 hover:bg-zinc-700 hover:text-white hover:border-zinc-600 transition-all shadow-sm"
+                >
+                  <Globe className="h-3.5 w-3.5 text-emerald-400" />
+                  <span>BOT Chain Website</span>
+                  <ExternalLink className="h-3 w-3 text-zinc-400" />
+                </a>
+
+                <a
+                  href="https://scan.botchain.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 rounded-xl border border-emerald-800/70 bg-emerald-950/40 px-4 py-2.5 text-xs font-semibold text-emerald-300 hover:bg-emerald-900/60 hover:text-emerald-200 transition-all shadow-sm"
+                >
+                  <Search className="h-3.5 w-3.5 text-emerald-400" />
+                  <span>BOT Chain Explorer</span>
+                  <ExternalLink className="h-3 w-3 text-emerald-400" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-zinc-850 bg-[#090a0d] py-6 text-center text-xs text-zinc-500 no-print">
-        <div className="mx-auto max-w-7xl px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <div className="flex items-center gap-2">
-            <span className="font-semibold text-zinc-300">InvoiceMint</span>
-            <span>—</span>
-            <span>Create invoices. Keep every record.</span>
+      <footer className="border-t border-zinc-850 bg-[#090a0d] py-8 text-xs text-zinc-500 no-print">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-2.5">
+              <div className="flex h-6 w-6 items-center justify-center rounded-lg bg-gradient-to-br from-purple-600 to-emerald-600 text-[10px] font-bold text-white">
+                IM
+              </div>
+              <span className="font-semibold text-zinc-200">InvoiceMint</span>
+              <span className="text-zinc-600">•</span>
+              <span className="text-zinc-400">Create invoices. Keep every record.</span>
+            </div>
+
+            {/* Required Links in Footer */}
+            <div className="flex flex-wrap items-center gap-5 text-xs">
+              <a
+                href="https://botchain.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-400 hover:text-emerald-400 transition-colors flex items-center gap-1"
+              >
+                <span>BOT Chain Website</span>
+                <ExternalLink className="h-3 w-3 text-zinc-500" />
+              </a>
+              <span className="text-zinc-700">•</span>
+              <a
+                href="https://scan.botchain.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-400 hover:text-emerald-400 transition-colors flex items-center gap-1"
+              >
+                <span>BOT Chain Explorer</span>
+                <ExternalLink className="h-3 w-3 text-zinc-500" />
+              </a>
+              <span className="text-zinc-700">•</span>
+              <a
+                href={`https://scan.botchain.ai/address/${INVOICE_MINT_ADDRESS}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-purple-400 hover:text-purple-300 transition-colors flex items-center gap-1"
+              >
+                <span>Verified Contract</span>
+                <ExternalLink className="h-3 w-3 text-purple-400" />
+              </a>
+            </div>
           </div>
-          <div className="flex items-center gap-4 text-[11px] text-zinc-400">
-            <span>Botchain Mainnet (Chain ID 677)</span>
-            <span>•</span>
-            <a
-              href="https://scan.botchain.ai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-purple-400 hover:underline"
-            >
-              BotchainScan Explorer
-            </a>
+
+          <div className="pt-2 border-t border-zinc-850/60 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-zinc-500">
+            <span>Decentralized Web3 Invoicing Application on BOT Chain (Chain ID: 677).</span>
+            <span>All records are stored immutably on the public ledger.</span>
           </div>
         </div>
       </footer>
@@ -217,4 +303,3 @@ export default function Home() {
     </div>
   );
 }
-

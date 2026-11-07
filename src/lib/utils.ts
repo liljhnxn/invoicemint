@@ -11,7 +11,7 @@ export function formatAddress(address?: string): string {
 }
 
 /**
- * Format wei amount to formatted BHR / ETH string
+ * Format wei amount to formatted BOT string
  */
 export function formatCryptoAmount(amount?: bigint, decimals = 4): string {
   if (amount === undefined || amount === null) return "0.00";

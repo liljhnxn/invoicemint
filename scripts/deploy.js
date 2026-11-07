@@ -4,7 +4,7 @@ const path = require("path");
 
 async function main() {
   console.log("----------------------------------------------------");
-  console.log("Deploying InvoiceMint smart contract...");
+  console.log("Deploying InvoiceMint smart contract to BOT Chain...");
   const [deployer] = await hre.ethers.getSigners();
   if (!deployer) {
     throw new Error("No deployer signer found. Please check PRIVATE_KEY in .env.local");
@@ -12,8 +12,7 @@ async function main() {
 
   const network = await hre.ethers.provider.getNetwork();
   const chainId = Number(network.chainId);
-  const isMainnet = chainId === 677;
-  const currencySymbol = isMainnet ? "BOT" : "BHR";
+  const currencySymbol = "BOT";
 
   console.log("Network:", hre.network.name, `(Chain ID: ${chainId})`);
   console.log("Deployer address:", deployer.address);
@@ -85,20 +84,18 @@ async function main() {
       envContent += `\nNEXT_PUBLIC_INVOICEMINT_ADDRESS=${contractAddress}\n`;
     }
 
-    if (isMainnet) {
-      envContent = envContent.replace(
-        /NEXT_PUBLIC_CHAIN_ID=.*/,
-        `NEXT_PUBLIC_CHAIN_ID=677`
-      );
-      envContent = envContent.replace(
-        /NEXT_PUBLIC_RPC_URL=.*/,
-        `NEXT_PUBLIC_RPC_URL=https://rpc.botchain.ai`
-      );
-      envContent = envContent.replace(
-        /NEXT_PUBLIC_EXPLORER_URL=.*/,
-        `NEXT_PUBLIC_EXPLORER_URL=https://scan.botchain.ai`
-      );
-    }
+    envContent = envContent.replace(
+      /NEXT_PUBLIC_CHAIN_ID=.*/,
+      `NEXT_PUBLIC_CHAIN_ID=677`
+    );
+    envContent = envContent.replace(
+      /NEXT_PUBLIC_RPC_URL=.*/,
+      `NEXT_PUBLIC_RPC_URL=https://rpc.botchain.ai`
+    );
+    envContent = envContent.replace(
+      /NEXT_PUBLIC_EXPLORER_URL=.*/,
+      `NEXT_PUBLIC_EXPLORER_URL=https://scan.botchain.ai`
+    );
 
     fs.writeFileSync(envPath, envContent);
     console.log("Updated .env.local with new contract address and chain configuration");

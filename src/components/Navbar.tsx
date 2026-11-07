@@ -55,8 +55,21 @@ export function Navbar() {
           </span>
         </div>
 
-        {/* Wallet & Network */}
+        {/* Navigation & Explorer Links */}
         <div className="flex items-center gap-3">
+          {/* Mainnet Explorer Direct Header Link */}
+          <a
+            href="https://scan.botchain.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:flex items-center gap-1.5 rounded-xl border border-zinc-800 bg-zinc-900/60 px-3 py-2 text-xs font-medium text-zinc-300 hover:text-emerald-400 hover:border-emerald-800/50 hover:bg-zinc-850 transition-all"
+            title="Open BOT Chain Explorer"
+          >
+            <span>BOT Chain Explorer</span>
+            <ExternalLink className="h-3 w-3 text-zinc-500" />
+          </a>
+
+          {/* Network Indicator / Switcher */}
           {isConnected && (
             <>
               {isWrongNetwork ? (
@@ -65,17 +78,24 @@ export function Navbar() {
                   className="flex items-center gap-1.5 rounded-lg border border-amber-600/50 bg-amber-950/40 px-3 py-1.5 text-xs font-medium text-amber-300 hover:bg-amber-900/50 transition-colors"
                 >
                   <AlertTriangle className="h-3.5 w-3.5 text-amber-400" />
-                  <span>Switch to Mainnet</span>
+                  <span>Switch to BOT Chain</span>
                 </button>
               ) : (
-                <div className="hidden sm:flex items-center gap-1.5 rounded-lg border border-zinc-800 bg-zinc-900/60 px-3 py-1.5 text-xs text-zinc-400">
-                  <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-                  <span>Botchain Mainnet (677)</span>
-                </div>
+                <a
+                  href="https://scan.botchain.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hidden sm:flex items-center gap-1.5 rounded-lg border border-emerald-900/40 bg-emerald-950/30 px-3 py-1.5 text-xs text-emerald-400 hover:bg-emerald-950/50 transition-colors"
+                  title="Connected to BOT Chain (Chain ID: 677)"
+                >
+                  <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span>BOT Chain (677)</span>
+                </a>
               )}
             </>
           )}
 
+          {/* Wallet Button */}
           {!isConnected ? (
             <button
               onClick={handleConnect}
@@ -102,7 +122,7 @@ export function Navbar() {
 
               {dropdownOpen && (
                 <div
-                  className="absolute right-0 mt-2 w-56 rounded-xl border border-zinc-800 bg-[#14161c] p-2 shadow-xl shadow-black/60 z-50 animate-in fade-in slide-in-from-top-1 duration-150"
+                  className="absolute right-0 mt-2 w-60 rounded-xl border border-zinc-800 bg-[#14161c] p-2 shadow-xl shadow-black/60 z-50 animate-in fade-in slide-in-from-top-1 duration-150"
                   onMouseLeave={() => setDropdownOpen(false)}
                 >
                   <div className="px-3 py-2 border-b border-zinc-800/80">
@@ -139,7 +159,17 @@ export function Navbar() {
                       className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-xs text-zinc-300 hover:bg-zinc-800/80 transition-colors"
                     >
                       <ExternalLink className="h-3.5 w-3.5 text-zinc-400" />
-                      <span>View on BotchainScan</span>
+                      <span>View on BOT Chain Explorer</span>
+                    </a>
+
+                    <a
+                      href="https://botchain.ai"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-xs text-zinc-300 hover:bg-zinc-800/80 transition-colors"
+                    >
+                      <ExternalLink className="h-3.5 w-3.5 text-zinc-400" />
+                      <span>BOT Chain Website</span>
                     </a>
                   </div>
 
